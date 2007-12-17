@@ -20,7 +20,6 @@ Group: Development/Perl
 Requires: perl-base >= 2:5.8.0 %{require_ocaml}
 URL: http://cvs.mandriva.com/cgi-bin/cvsweb.cgi/soft/perl_checker
 Source0: perl_checker-%version.tar.bz2
-BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: ocaml >= 3.06
 # for the faked packages:
 AutoReqProv: 0
