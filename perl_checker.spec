@@ -1,6 +1,6 @@
 # MODIFY IN THE SVN
 
-%define version 1.2.8
+%define version 1.2.9
 %define release %mkrel 1
 
 %ifarch ppc64
