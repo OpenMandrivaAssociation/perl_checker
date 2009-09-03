@@ -1,7 +1,7 @@
 # MODIFY IN THE SVN
 
 %define version 1.2.11
-%define release %mkrel 1
+%define release %mkrel 2
 
 %ifarch ppc64
 %define build_option PERL_CHECKER_TARGET='debug-code BCSUFFIX=""'
