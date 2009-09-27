@@ -1,9 +1,9 @@
 # MODIFY IN THE SVN
 
 %define version 1.2.11
-%define release %mkrel 2
+%define release %mkrel 3
 
-%ifarch ppc64
+%ifarch ppc64 %mips %arm
 %define build_option PERL_CHECKER_TARGET='debug-code BCSUFFIX=""'
 %define require_ocaml /usr/bin/ocamlrun
 %else
