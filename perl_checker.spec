@@ -15,7 +15,7 @@ Summary: Verify perl code
 Name: perl_checker
 Version: %{version}
 Release: %{release}
-License: GPL
+License: GPLv2+
 Group: Development/Perl
 Requires: perl-base >= 2:5.8.0 %{require_ocaml}
 URL: http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/perl_checker
