@@ -1,7 +1,7 @@
 # MODIFY IN THE SVN
 
 %define version 1.2.11
-%define release %mkrel 4
+%define release %mkrel 5
 
 %ifarch ppc64 %mips %arm
 %define build_option PERL_CHECKER_TARGET='debug-code BCSUFFIX=""'
@@ -11,7 +11,7 @@
 %define require_ocaml %nil
 %endif
 
-Summary: Verify perl code
+Summary: Verify Perl code
 Name: perl_checker
 Version: %{version}
 Release: %{release}
