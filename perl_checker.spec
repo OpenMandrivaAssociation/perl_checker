@@ -35,6 +35,12 @@ Various verifying scripts created for DrakX
 %setup -q
 
 %build
+# (tv) fix testsuite:
+cat > src/test/.perl_checker<<EOF
+Carp
+Carp::Heavy
+File::Sync
+EOF
 make %build_option
 
 %install
