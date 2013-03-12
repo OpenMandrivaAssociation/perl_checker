@@ -1,45 +1,37 @@
 # MODIFY IN THE SVN
 
-%define version 1.2.11
-%define release %mkrel 8
-
 %ifarch ppc64 %mips %arm
 %define build_option PERL_CHECKER_TARGET='debug-code BCSUFFIX=""'
-%define require_ocaml /usr/bin/ocamlrun
 %else
 %define build_option %nil
-%define require_ocaml %nil
 %endif
 
-Summary: Verify Perl code
-Name: perl_checker
-Version: %{version}
-Release: %{release}
-License: GPLv2+
-Group: Development/Perl
-Requires: perl-base >= 2:5.8.0 %{require_ocaml}
-URL: http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/perl_checker
-Source0: perl_checker-%version.tar.bz2
-BuildRequires: ocaml >= 3.06
+Summary:	Verify Perl code
+Name:		perl_checker
+Version:	1.2.11
+Release:	9
+License:	GPLv2+
+Group:		Development/Perl
+URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/perl_checker
+Source0:	perl_checker-%version.tar.bz2
+%ifarch ppc64 %mips %arm
+# need ocamlrun
+Requires:	ocaml
+%endif
+BuildRequires:	ocaml >= 3.06
 # for the faked packages:
-AutoReqProv: 0
+AutoReqProv:	0
 
-Obsoletes: perl-MDK-Common-devel <= 1.1.24
-Provides: perl-MDK-Common-devel <= 1.1.24
+Obsoletes:	perl-MDK-Common-devel <= 1.1.24
+Provides:	perl-MDK-Common-devel = 1.1.25
 
 %description
-Various verifying scripts created for DrakX
+Various verifying scripts created for DrakX.
 
 %prep
 %setup -q
 
 %build
-# (tv) fix testsuite:
-cat > src/test/.perl_checker<<EOF
-Carp
-Carp::Heavy
-File::Sync
-EOF
 make %build_option
 
 %install
