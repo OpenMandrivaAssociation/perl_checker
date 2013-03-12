@@ -19,6 +19,7 @@ Source0:	perl_checker-%version.tar.bz2
 Requires:	ocaml
 %endif
 BuildRequires:	ocaml >= 3.06
+BuildRequires:	perl-MDK-Common
 # for the faked packages:
 AutoReqProv:	0
 
