@@ -20,6 +20,7 @@ Requires:	ocaml
 %endif
 BuildRequires:	ocaml >= 3.06
 BuildRequires:	perl-MDK-Common
+BuildRequires:  perl(Filesys::Df)
 # for the faked packages:
 AutoReqProv:	0
 
