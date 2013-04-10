@@ -8,11 +8,11 @@
 
 Summary:	Verify Perl code
 Name:		perl_checker
-Version:	1.2.11
-Release:	9
+Version:	1.2.24
+Release:	1
 License:	GPLv2+
 Group:		Development/Perl
-URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/perl_checker
+URL:		http://http://svnweb.mageia.org/soft/perl_checker
 Source0:	perl_checker-%version.tar.bz2
 %ifarch ppc64 %mips %arm
 # need ocamlrun
