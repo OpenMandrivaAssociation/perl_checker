@@ -3,7 +3,7 @@
 %ifarch ppc64 %mips %arm
 %define build_option PERL_CHECKER_TARGET='debug-code BCSUFFIX=""'
 %else
-%define build_option 
+%define build_option %nil 
 %endif
 
 Summary:	Verify Perl code
