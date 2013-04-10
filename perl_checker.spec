@@ -3,7 +3,7 @@
 %ifarch ppc64 %mips %arm
 %define build_option PERL_CHECKER_TARGET='debug-code BCSUFFIX=""'
 %else
-%define build_option %nil
+%define build_option 
 %endif
 
 Summary:	Verify Perl code
@@ -12,7 +12,7 @@ Version:	1.2.24
 Release:	1
 License:	GPLv2+
 Group:		Development/Perl
-URL:		http://http://svnweb.mageia.org/soft/perl_checker
+URL:		http://svnweb.mageia.org/soft/perl_checker
 Source0:	perl_checker-%version.tar.bz2
 %ifarch ppc64 %mips %arm
 # need ocamlrun
@@ -34,7 +34,11 @@ Various verifying scripts created for DrakX.
 %setup -q
 
 %build
-make %build_option
+make src/perl_checker %build_option
+src/perl_checker --help
+
+%check
+make test
 
 %install
 %makeinstall_std %build_option
