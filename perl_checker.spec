@@ -1,7 +1,7 @@
 # MODIFY IN THE SVN
 %define debug_package %{nil}
 
-%ifarch ppc64 %mips %arm
+%ifarch ppc64 %mips %arm aarch64
 %define build_option PERL_CHECKER_TARGET='debug-code BCSUFFIX=""'
 %else
 %define build_option %{nil} 
@@ -16,13 +16,11 @@ Group:		Development/Perl
 Url:		http://svnweb.mageia.org/soft/perl_checker
 Source0:	perl_checker-%version.tar.bz2
 Patch0:	perl_checker-1.2.24-disable_test.patch
+%ifnarch aarch64
 BuildRequires:	ocaml >= 3.06
+%endif
 BuildRequires:	perl-MDK-Common
 BuildRequires:	perl(Filesys::Df)
-%ifarch ppc64 %mips %arm
-# need ocamlrun
-Requires:	ocaml
-%endif
 # for the faked packages:
 AutoReqProv:	0
 Obsoletes:	perl-MDK-Common-devel <= 1.1.24
