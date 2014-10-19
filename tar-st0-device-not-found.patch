@@ -1,0 +1,13 @@
+diff --git a/Makefile b/Makefile
+index 3302ac1..e86398f 100644
+--- a/Makefile
++++ b/Makefile
+@@ -29,7 +29,7 @@ install: clean all
+ 	$(MAKE) -C misc install
+ 	install src/perl_checker $(DESTDIR)$(BINDIR)
+ 	install -d $(DESTDIR)$(fake_packages_dir)
+-	cd fake_packages ; tar c `find . -name "*.pm"` | tar xC $(DESTDIR)$(fake_packages_dir)
++	cd fake_packages ; tar cf - `find . -name "*.pm"` | tar xf - -C $(DESTDIR)$(fake_packages_dir)
+ 
+ update:
+ 	svn update

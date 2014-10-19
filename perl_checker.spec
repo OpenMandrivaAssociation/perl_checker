@@ -9,13 +9,14 @@
 
 Summary:	Verify Perl code
 Name:		perl_checker
-Version:	1.2.24
-Release:	8
+Version:	1.2.26
+Release:	1
 License:	GPLv2+
 Group:		Development/Perl
 Url:		http://svnweb.mageia.org/soft/perl_checker
-Source0:	perl_checker-%version.tar.bz2
-Patch0:	perl_checker-1.2.24-disable_test.patch
+Source0:	perl_checker-%version.tar.xz
+Patch0:		perl_checker-1.2.24-disable_test.patch
+Patch1:		tar-st0-device-not-found.patch
 %ifnarch aarch64
 BuildRequires:	ocaml >= 3.06
 %endif
