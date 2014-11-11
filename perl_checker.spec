@@ -1,7 +1,7 @@
 # MODIFY IN THE SVN
 %define debug_package %{nil}
 
-%ifarch ppc64 %mips %arm aarch64
+%ifarch ppc64 %mips
 %define build_option PERL_CHECKER_TARGET='debug-code BCSUFFIX=""'
 %else
 %define build_option %{nil} 
