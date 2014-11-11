@@ -17,9 +17,7 @@ Url:		http://svnweb.mageia.org/soft/perl_checker
 Source0:	perl_checker-%version.tar.xz
 Patch0:		perl_checker-1.2.24-disable_test.patch
 Patch1:		tar-st0-device-not-found.patch
-%ifnarch aarch64
-BuildRequires:	ocaml >= 3.06
-%endif
+BuildRequires:	ocaml
 BuildRequires:	perl-MDK-Common
 BuildRequires:	perl(Filesys::Df)
 # for the faked packages:
