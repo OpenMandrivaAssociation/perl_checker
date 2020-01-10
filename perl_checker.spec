@@ -30,7 +30,7 @@ Various verifying scripts created for DrakX.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 make src/perl_checker %build_option
