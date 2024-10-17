@@ -13,7 +13,7 @@ Version:	1.2.26
 Release:	6
 License:	GPLv2+
 Group:		Development/Perl
-Url:		http://svnweb.mageia.org/soft/perl_checker
+Url:		https://svnweb.mageia.org/soft/perl_checker
 Source0:	perl_checker-%version.tar.xz
 Patch0:		perl_checker-1.2.24-disable_test.patch
 Patch1:		tar-st0-device-not-found.patch
